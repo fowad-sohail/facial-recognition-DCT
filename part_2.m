@@ -19,7 +19,9 @@ subplot(1, 3, 3)
 plot_features(vector_dim_100);
 title('Feature Vector with Dimension 100');
 
-sgtitle('Subject 17 Picture 6 DCT Vector');
+sg = sgtitle('Subject 17 Picture 6 DCT Vector');
+sg.FontSize = 20;
+sg.FontWeight = 'bold';
 
 % Given a dct of an image in the zigzag format (given by findfeaturs())
 % Return plot of the feature vector vs its indices
