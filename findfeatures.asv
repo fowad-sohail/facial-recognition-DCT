@@ -127,11 +127,9 @@ vettore_t        = t(:); % convert image to column vector
 vettore_t_zigzag = zeros(size(vettore_t)); % zero vector of size(vettore_t)
 vettore_zigzag   = zigzag(:); % convert zigzag to column vector
 for ii=1:length(vettore_t)
-    % rearrange picture vector in zigzag format instead of horizontal
-    % format
+    % rearrange picture 
     vettore_t_zigzag(vettore_zigzag(ii)) = vettore_t(ii);
 end
-% truncate output according to the parameter dctlength
 result = vettore_t_zigzag(2:Lout+1);
 %--------------------------------------------------------------------------
 %--------------------------------------------------------------------------
