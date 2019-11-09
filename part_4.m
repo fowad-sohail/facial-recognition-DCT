@@ -3,8 +3,10 @@ dctlength = 70;
 k = 5;
 for i=1:numSub
     for j=6:10
+	************************* UPDATE THIS DEPENDING ON YOUR FILE SYSTEM ************************* 
         filename = ['C:\Users\TimRo\Documents\Github\facial-recognition-DCT\att_faces\s'...
             num2str(f_range(i)) '\' num2str(j) '.pgm'];
+
         [topDist, person_id] = PersonRecog(filename, trdata_raw, trclass, dctlength, k);
         
         person_unique = unique(person_id);
