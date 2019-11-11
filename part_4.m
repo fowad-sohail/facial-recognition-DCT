@@ -3,10 +3,21 @@ dctlength = 70;
 k = 5;
 for i=1:numSub
     for j=6:10
+        
+    % Assign the vector f_range to the range of subject specified by
+    % subject_range
+    f_range=1:40;
+
+    % Check if subject_range(1) = f_range(1) = 1
+    if (f_range(1) ~= 1)
+      error('The first subject must have a label of 1');
+    end
+
+    % Assign the number of subjects to the length of f_range
+    nsubjects = length(f_range);
 	% ************************* UPDATE THIS DEPENDING ON YOUR FILE SYSTEM ************************* 
         filename = ['C:\Users\TimRo\Documents\Github\facial-recognition-DCT\att_faces\s'...
             num2str(f_range(i)) '\' num2str(j) '.pgm'];
-
         [topDist, person_id] = PersonRecog(filename, trdata_raw, trclass, dctlength, k);
         
         person_unique = unique(person_id);
@@ -49,5 +60,6 @@ for i=1:numSub
         disp(person_id);
         disp("SELECTED WINNER");
         disp(winner);
+        disp("Test");
     end
 end
