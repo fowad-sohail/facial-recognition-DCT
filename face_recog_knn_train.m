@@ -47,6 +47,7 @@ for i=1:nsubjects
     for j=1:5
 
 % Assign the filename for processing
+% *********************************** UPDATE THIS DEPENDING ON YOUR FILE SYSTEM *********************************** 
         name = ['C:\Users\TimRo\Documents\Github\facial-recognition-DCT\att_faces\s'...
             num2str(f_range(i)) '\' num2str(j) '.pgm'];
 
